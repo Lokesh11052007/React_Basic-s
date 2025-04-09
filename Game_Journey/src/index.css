@@ -1,35 +1,115 @@
-*{
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-#content {
-    
-    width: 40%;
-    position: relative;
-    left: 30%;
-    top: 50px;
-    border-radius: 15%;
-}
-
-header{
-  background: linear-gradient(90deg, #0f0f0f, #1a1a1a);
-  color: #00fff7;
-  font-family: 'Orbitron', sans-serif; /* Futuristic font */
-  box-shadow: 0 4px 10px rgba(0, 255, 247, 0.3);
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  }
   
+  /* Body Setup */
+  body {
+    font-family: 'Orbitron', sans-serif; /* Gaming-style font */
+    background-color: #0f0f0f;
+    color: #f0f0f0;
+    padding: 20px;
+  }
+  
+#content {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50% -50%);
 }
 
-header > img {
-    width: 25px;
-    margin-bottom: 5px;
-    margin-right: 7px;
-}
-
-header > h1{
-    font-size: 0.9rem;
-    font-weight: 500;
-}
+  /* Header */
+  header {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    box-shadow: 0 0 10px #ff4b2b;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  header img {
+    width: 40px;
+    height: auto;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  
+  /* Journal Entry */
+  .journal-entry {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .journal-entry:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Main Image */
+  .main-image-container {
+    width: 150px;
+    height: auto;
+  }
+  .main-image-container .main-image {
+    /* width: 150px;
+    height: 250px; */
+    /* display: block; */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff4b2b;
+  }
+  
+  /* Entry Text */
+  .entry-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+  
+  .entry-container img {
+    vertical-align: middle;
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+  }
+  
+  .entry-container span {
+    font-size: 0.85rem;
+    color: #aaa;
+    text-transform: uppercase;
+  }
+  
+  .entry-container a {
+    color: #0ef;
+    font-size: 0.8rem;
+    text-decoration: underline;
+  }
+  
+  .entry-title {
+    font-size: 1.5rem;
+    color: #ff4b2b;
+  }
+  
+  .entry-container p {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.4;
+  }
+  
