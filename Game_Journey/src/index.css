@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+#content {
+    
+    width: 40%;
+    position: relative;
+    left: 30%;
+    top: 50px;
+    border-radius: 15%;
+}
+
+header{
+  background: linear-gradient(90deg, #0f0f0f, #1a1a1a);
+  color: #00fff7;
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  box-shadow: 0 4px 10px rgba(0, 255, 247, 0.3);
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+header > img {
+    width: 25px;
+    margin-bottom: 5px;
+    margin-right: 7px;
+}
+
+header > h1{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
