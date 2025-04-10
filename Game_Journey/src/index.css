@@ -19,7 +19,9 @@
     left: 25%;
     top: 50%;
     transform: translate(-50% -50%);
+  
 }
+
 
   /* Header */
   header {
@@ -50,29 +52,30 @@
     display: flex;
     gap: 1.5rem;
     background-color: #1e1e1e;
-    padding: 1.5rem;
-    border-radius: 12px;
+    margin-bottom: 5px;
+    /* border-radius: 12px;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s; */
   }
   
-  .journal-entry:hover {
+  /* .journal-entry:hover {
     transform: translateY(-5px);
   }
-  
+   */
   /* Main Image */
   .main-image-container {
     width: 150px;
     height: auto;
+    display: flex;
   }
   .main-image-container .main-image {
     /* width: 150px;
     height: 250px; */
     /* display: block; */
+    height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 10px #ff4b2b;
   }
   
   /* Entry Text */

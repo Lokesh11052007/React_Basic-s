@@ -1,25 +1,23 @@
-export default function entry() {
+export default function entry(props) {
     return (
         <article className="journal-entry">
             <div className= "main-image-container">
                 <img className="main-image" 
-                src="../public/assets/pubg.jpg"
-                alt="pubg"
+                src={props.img} 
+                alt={props.imgName}
                 />
             </div>
             <div className="entry-container">
                 <div>
-                    <img src="../public/assets/andriod.png"
+                    <img src="/assets/andriod.png"
                         alt="android" 
-                        width="20px"
                         />
                     <span>android</span>
                 </div>
-                <a href="https://pubg.com/en/main">Download Now</a>
-                <h2 className="entry-title">PUBG</h2>
-                <h4>24 Sep 2018 - Current</h4>
-                <p>BATTLEGROUNDS is a battle royale that pits 100 players against each other.
-                Outplay your opponents to become the lone survivor. Play free now!</p>
+                <a href={props.url}>Download Now</a>
+                <h2 className="entry-title">{props.name}</h2>
+                <h4>{props.year}</h4>
+                <p>{props.story}</p>
             </div>
         </article>
     )
