@@ -52,20 +52,20 @@
     display: flex;
     gap: 1.5rem;
     background-color: #1e1e1e;
-    margin-bottom: 5px;
+    margin-bottom: 16px;
     /* border-radius: 12px;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s; */
   }
   
-  /* .journal-entry:hover {
+  .journal-entry:hover {
     transform: translateY(-5px);
   }
-   */
+   
   /* Main Image */
   .main-image-container {
     width: 150px;
-    height: auto;
+    height: 270px;
     display: flex;
   }
   .main-image-container .main-image {
