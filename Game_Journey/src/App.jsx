@@ -7,12 +7,13 @@ export default function App() {
     return (
       <Entry 
           key={data.id}
-          img={data.img}
-          imgName={data.imgName}
-          url={data.url}
-          name={data.name}
-          year={data.year}
-          story={data.story}
+          // img={data.img}
+          // imgName={data.imgName}
+          // url={data.url}
+          // name={data.name}
+          // year={data.year}
+          // story={data.story}
+           {...data}             // ----> this syntax do exactly like above line 10 - 15 , for this lhs & rhs should define same name
           />
     )
   })
