@@ -6,6 +6,7 @@ export default function App() {
   const list =  entryData.map((data) => {
     return (
       <Entry 
+          key={data.id}
           img={data.img}
           imgName={data.imgName}
           url={data.url}
