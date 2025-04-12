@@ -102,3 +102,7 @@ ul.ingredients-list > li {
   font-size: 0.875rem;
   cursor: pointer;
 }
+
+.get-recipe-container button:hover {
+  background: #ff4000
+}
