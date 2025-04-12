@@ -21,6 +21,7 @@ header > img {
   width: 50px;
 }
 header  > h1 {
+  font-family: "Permanent Marker", cursive;
   font-weight: 400;
 }
 main {
@@ -105,4 +106,24 @@ ul.ingredients-list > li {
 
 .get-recipe-container button:hover {
   background: #ff4000
+}
+
+
+.suggested-recipe-container {
+  color: #475467;
+  line-height: 28px;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+  margin-bottom: 8px;
+}
+
+.suggested-recipe-container h1 h2 ul ::marker{
+  color: black;
+}
+
+.suggested-recipe-container ul ::marker{
+  color: black;
 }
