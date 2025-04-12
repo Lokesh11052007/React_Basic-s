@@ -5,7 +5,7 @@ import IngredientsList from "./components/IngredientsList";
 export default function Main() {
     const [ingredient, setIngredient] = React.useState([]);
 
-    function handleSubmit(event){
+    function addIngredient(event){
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
         const newIngredient = formData.get("Ingredient")
@@ -21,7 +21,7 @@ export default function Main() {
 
     return (
         <main>
-            <form onSubmit={handleSubmit}  className="add-ingredient-form">
+            <form onSubmit={addIngredient}  className="add-ingredient-form">
                 <input 
                   type="text"
                   placeholder="e.g: oregano"
