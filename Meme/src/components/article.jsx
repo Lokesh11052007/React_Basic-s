@@ -10,6 +10,14 @@ export default function Article() {
         imgURL: img
     })
 
+    function handleChange(event) {
+        const {value} = event.currentTarget;
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            topText:value
+        }))
+    }
+
     return (
         <main>
             <div className="form">
@@ -18,6 +26,7 @@ export default function Article() {
                     type="text"
                     placeholder="One does not simply"
                     name="topText"
+                    onChange={handleChange}
                     />
                 </label>
 
@@ -27,7 +36,7 @@ export default function Article() {
                     placeholder="Walk into moran"
                     name="bottomText" />
                 </label>
-                <button>Get a new meme image</button>
+                <button >Get a new meme image</button>
             </div>
             <div className="meme">
                 <img src={meme.imgURL} alt="memo" />
