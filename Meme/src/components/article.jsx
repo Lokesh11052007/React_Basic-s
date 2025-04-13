@@ -1,6 +1,14 @@
-import img from '../assets/download.png'
+import { useState } from 'react'
+
+import img from  '../assets/download.png'
 
 export default function Article() {
+
+    const [meme, setMeme] = useState({
+        topText:"One does not simply",
+        bottomText: "walk into mordor",
+        imgURL: img
+    })
 
     return (
         <main>
@@ -22,9 +30,9 @@ export default function Article() {
                 <button>Get a new meme image</button>
             </div>
             <div className="meme">
-                <img src={img} alt="memo" />
-                <span className='top'>One does not simply</span>
-                <span className='bottom'>walk into mordor</span>
+                <img src={meme.imgURL} alt="memo" />
+                <span className='top'>{meme.topText} </span>
+                <span className='bottom'>{meme.bottomText} </span>
             </div>
         </main>
     )
