@@ -10,12 +10,12 @@ export default function Article() {
         imgURL: img
     })
 
-    function handleChange(event) {
-        const {value} = event.currentTarget;
+    function handleChange(event) {                  // this function taken place in two label 
+        const {value, name} = event.currentTarget;  //capturing the value currently changing and fetching its field by name
         setMeme(prevMeme => ({
             ...prevMeme,
-            topText:value
-        }))
+            [name]:value                            // value is assigning corresponds to its name, and it act as attribute for setMeme  `` [name:topText || name:bottomText]:value ``
+        }))                                         // setMeme has attributes there are "topText" and "bottomText" and "imgURL"
     }
 
     return (
@@ -27,6 +27,7 @@ export default function Article() {
                     placeholder="One does not simply"
                     name="topText"
                     onChange={handleChange}
+                    value={meme.topText}
                     />
                 </label>
 
@@ -34,7 +35,10 @@ export default function Article() {
                     <input 
                     type="text"
                     placeholder="Walk into moran"
-                    name="bottomText" />
+                    name="bottomText"
+                    onChange={handleChange}
+                    value={meme.bottomText}
+                    />
                 </label>
                 <button >Get a new meme image</button>
             </div>
