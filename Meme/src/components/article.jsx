@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 
 import img from  '../assets/download.png'
 
@@ -8,12 +8,21 @@ export default function Article() {
         topText:"One does not simply",
         bottomText: "walk into mordor",
         imgURL: img
-    })
+    });
+
+    const [ allMeme, setAllMeme ] = useState([]);
+
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+         .then(res => res.json())
+         .then(data => setAllMeme(data.data.meme))
+    }, [])
+
 
     function handleChange(event) {                  // this function taken place in two label 
         const {value, name} = event.currentTarget;  //capturing the value currently changing and fetching its field by name
         setMeme(prevMeme => ({
-            ...prevMeme,
+            ...prevMeme,                            // name means here fetching from input field's name 
             [name]:value                            // value is assigning corresponds to its name, and it act as attribute for setMeme  `` [name:topText || name:bottomText]:value ``
         }))                                         // setMeme has attributes there are "topText" and "bottomText" and "imgURL"
     }
