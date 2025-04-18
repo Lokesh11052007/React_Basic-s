@@ -55,7 +55,13 @@ header > h1 {
     border: none;
     cursor: pointer;
 }
+.form button:hover{
+    transform: scale(1.01);
+}
 
+.form input:hover {
+    border: 1px solid #711F8D;
+}
 .form input, .form button {
     min-height: 40px;
     font-family: "Karla", sans-serif;
