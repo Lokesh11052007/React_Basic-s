@@ -1,17 +1,25 @@
-import React from "react";
-import ClaudeRecipe from "./components/ClaudeRecipe";
+import React, { useEffect } from "react";
+// import ClaudeRecipe from "./components/ClaudeRecipe";
 import IngredientsList from "./components/IngredientsList";
 
-import { getRecipeFromMistral} from "./ai"
-
+// import { getRecipeFromMistral} from "./ai"
+import  SampleComponent  from "./components/sample";
 export default function Main() {
-    const [ingredient, setIngredient] = React.useState([]);
-    const [recipe, setRecipe] = React.useState("")
+    const [ingredient, setIngredient] = React.useState([1,2,3,4,5]);
 
-    async function getRecipe(){
-        const recipeMarkdown = await getRecipeFromMistral(ingredient)
-        setRecipe(recipeMarkdown)
+    const [recipe, setRecipe] = React.useState("");
 
+    const recipeSelection = React.useRef(null);
+
+    console.log(recipeSelection)
+    // async function getRecipe(){
+    //     const recipeMarkdown = await getRecipeFromMistral(ingredient)
+    //     setRecipe(recipeMarkdown)
+
+    // }
+
+    function getRecipe(){
+        setRecipe(SampleComponent)
     }
 
     function addIngredient(event){
@@ -22,6 +30,11 @@ export default function Main() {
         setIngredient(prevIngredient => [...prevIngredient, newIngredient])
     }
 
+    useEffect(() => {
+        if (recipeSelection.current) {
+            recipeSelection.current.scrollIntoView({ behavior: "smooth" });
+        }
+    },[recipe])
     
 
     return (
@@ -38,11 +51,11 @@ export default function Main() {
             {ingredient.length > 0 && <IngredientsList 
                toggleButton={getRecipe}
                ingredient={ingredient}
-
+               ref = {recipeSelection}
             />
             }
 
-            {recipe && <ClaudeRecipe recipe={recipe}/>}
+            {recipe && <SampleComponent />}
 
         </main>
     )
